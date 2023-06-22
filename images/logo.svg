@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="45.070976mm"
+   height="17.059896mm"
+   viewBox="0 0 45.070976 17.059896"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="logo.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="true"
+     inkscape:zoom="5.6568543"
+     inkscape:cx="77.781746"
+     inkscape:cy="41.630912"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="2391"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid1351"
+       originx="-43.928775"
+       originy="-53.603142" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-43.928776,-53.603143)">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:23.4727px;font-family:'Varela Round';-inkscape-font-specification:'Varela Round, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#70ad47;stroke-width:0.366759"
+       x="85.449768"
+       y="-45.300804"
+       id="text1349-5"
+       transform="matrix(0,0.7714338,-1.2962875,0,0,0)"><tspan
+         sodipodi:role="line"
+         id="tspan1347-6"
+         style="stroke-width:0.366759"
+         x="85.449768"
+         y="-45.300804">)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.9333px;font-family:'Varela Round';-inkscape-font-specification:'Varela Round, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#70ad47;stroke-width:0.264583"
+       x="42.591045"
+       y="66.059319"
+       id="text1355"><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="42.591045"
+         y="66.059319"
+         id="tspan1357">mu</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.9333px;font-family:'Varela Round';-inkscape-font-specification:'Varela Round, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#70ad47;stroke-width:0.264583"
+       x="79.12764"
+       y="66.049118"
+       id="text1363"><tspan
+         sodipodi:role="line"
+         id="tspan1361"
+         style="stroke-width:0.264583"
+         x="79.12764"
+         y="66.049118">b</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.9333px;font-family:'Varela Round';-inkscape-font-specification:'Varela Round, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#70ad47;stroke-width:0.264583"
+       x="-78.622513"
+       y="66.083008"
+       id="text852-3"
+       transform="scale(-1,1)"><tspan
+         sodipodi:role="line"
+         id="tspan850-8"
+         style="stroke-width:0.264583"
+         x="-78.622513"
+         y="66.083008">u</tspan></text>
+  </g>
+</svg>
