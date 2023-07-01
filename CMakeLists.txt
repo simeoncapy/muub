@@ -11,6 +11,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets LinguistTools)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets LinguistTools)
+find_package(Qt6 REQUIRED COMPONENTS Svg)
 
 set(TS_FILES muub_fr_FR.ts)
 
@@ -52,6 +53,7 @@ else()
 endif()
 
 target_link_libraries(muub PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
+target_link_libraries(muub PRIVATE Qt6::Svg)
 
 set_target_properties(muub PROPERTIES
     MACOSX_BUNDLE_GUI_IDENTIFIER my.example.com

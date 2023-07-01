@@ -11,5 +11,6 @@
         <file>styles/default_style.qss</file>
         <file>images/background-blue.jpg</file>
         <file>images/background-black.jpg</file>
+        <file>images/background-blue2.jpg</file>
     </qresource>
 </RCC>

@@ -8,6 +8,8 @@
 #include <QException>
 #include <QGraphicsDropShadowEffect>
 #include <QProcess>
+#include <QSvgRenderer>
+#include <QPainter>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -30,5 +32,7 @@ private:
 
     void timerEvent(QTimerEvent *event);
     void loadGameService();
+    QPixmap recolorSvg(const QString& path, const QColor& color, const QSize& size);
+    void setDesign();
 };
 #endif // MAINWINDOW_H

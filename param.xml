@@ -1,0 +1,36 @@
+<root>
+    <head>
+        <file date="2023-07-01 22:03" user="simeo" />
+        <settings theme="dark blue" lang="syst" keyboard="syst"/>
+    </head>
+    <media>
+        <app name="Disney+"
+                icon=""
+                path=""
+        />
+    </media>
+    <game-service>
+        <app name="EA"
+                icon=":/images/EA_logo.svg"
+                path="C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe"
+        />
+        <app name="Epic Games"
+                icon=":/images/Epic_Games_logo.svg"
+                path=""
+        />
+        <app name="Steam"
+                icon=":/images/Steam_logo.svg"
+                path=""
+        />
+        <app name="Ubisoft"
+                icon=":/images/Ubisoft_logo.svg"
+                path=""
+        />
+    </game-service>
+    <game>
+        <app name="Overcook"
+                icon=""
+                path=""
+        />
+    </game>
+</root>

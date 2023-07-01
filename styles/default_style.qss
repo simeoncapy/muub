@@ -1,6 +1,7 @@
 QPushButton {
     padding: 5px;
     border: none;
+    color: white;
 }
 
 QPushButton:hover {
@@ -20,3 +21,19 @@ QPushButton:focus
 QScrollArea { background: transparent; }
 QScrollArea > QWidget > QWidget { background: transparent; }
 QScrollArea > QWidget > QScrollBar { background: palette(base); }
+
+QLabel
+{
+    color: white;
+}
+
+QLabel#videoGamesCategory
+{
+    padding-top: 20px;
+}
+
+QScrollArea QPushButton
+{
+    border: 5px solid yellow;
+}
+

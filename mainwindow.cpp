@@ -16,12 +16,28 @@ MainWindow::MainWindow(QWidget *parent)
     palette.setBrush(QPalette::Window, bkgnd);
     this->setPalette(palette);*/
 
-   setStyleSheet(
-        "QMainWindow {background-image:url(\":/images/background-blue.jpg\"); background-position: center;}" );
+    setDesign();
+}
+
+MainWindow::~MainWindow()
+{
+    delete ui;
+}
+
+void MainWindow::setDesign()
+{
+    QSize iconSize = QSize(32,32);
+    QColor white(Qt::white);
+
+
+    setStyleSheet(
+        "QMainWindow {background-image:url(\":/images/background-blue2.jpg\"); "
+        "background-position: center;}"
+        );
 
     int id = QFontDatabase::addApplicationFont(":/fonts/VarelaRound-Regular.ttf");
     QString fontFamily_title = QFontDatabase::applicationFontFamilies(id).at(0);
-    QFont font_title(fontFamily_title, 20, QFont::Bold);
+    QFont font_title(fontFamily_title, 24, QFont::Bold);
 
     ui->mediaCategory->setFont(font_title);
     ui->videoGamesCategory->setFont(font_title);
@@ -31,18 +47,27 @@ MainWindow::MainWindow(QWidget *parent)
     ui->logo->setPixmap(QIcon(":/images/logo.svg").pixmap(QSize(100,50)));
     loadGameService();
 
-    QSize iconSize = QSize(32,32);
-    ui->bt_add->setIcon(QIcon(":/images/add_icon.svg").pixmap(iconSize));
+    //ui->bt_add->setIcon(QIcon(":/images/add_icon.svg").pixmap(iconSize));
+    QPixmap pixmap = recolorSvg(":/images/add_icon.svg", white, iconSize);
+    ui->bt_add->setIcon(QIcon(pixmap));
     ui->bt_add->setText("");
     ui->bt_add->setIconSize(iconSize);
-    ui->bt_settings->setIcon(QIcon(":/images/settings_icon.svg").pixmap(iconSize));
+
+    ui->bt_settings->setIcon(QIcon(recolorSvg(":/images/settings_icon.svg", white, iconSize)));
     ui->bt_settings->setText("");
     ui->bt_settings->setIconSize(iconSize);
-}
 
-MainWindow::~MainWindow()
-{
-    delete ui;
+    ui->saMedia->widget()->setMaximumHeight(150);
+    ui->saMedia->setMaximumHeight(150);
+    ui->saVideoGames->widget()->setMaximumHeight(150);
+    ui->saVideoGames->setMaximumHeight(150);
+    for(int i = 0 ; i < 10 ; i++)
+    {
+        QPushButton* bt = new QPushButton("Test ");
+        bt->setMinimumSize(200,100);
+        bt->setMaximumSize(200,100);
+        ui->saMedia->widget()->layout()->addWidget(bt);
+    }
 }
 
 void MainWindow::timerEvent(QTimerEvent * event)
@@ -84,6 +109,36 @@ void MainWindow::loadGameService()
         //m_list_gameService[gs]->setStyle();
         i++;
     }
+}
+
+QPixmap MainWindow::recolorSvg(const QString& path, const QColor& color, const QSize& size)
+{
+    QSvgRenderer renderer(path);
+    QImage image(size, QImage::Format_ARGB32);
+    image.fill(Qt::transparent);
+
+    QPainter painter(&image);
+    renderer.render(&painter);
+
+    // Recolor the image
+    for (int y = 0; y < image.height(); ++y) {
+        for (int x = 0; x < image.width(); ++x) {
+            QColor pixelColor = image.pixelColor(x, y);
+            if (pixelColor.alpha() > 0) {
+                // Check if the pixel color is the stroke color
+                if (pixelColor != Qt::transparent && pixelColor != Qt::white) {
+                    // Set the desired color while preserving the alpha and stroke width
+                    QColor newColor(color);
+                    newColor.setAlpha(pixelColor.alpha());
+                    painter.setPen(newColor);
+                    painter.setBrush(newColor);
+                }
+                painter.drawPoint(x, y);
+            }
+        }
+    }
+
+    return QPixmap::fromImage(image);
 }
 
 void MainWindow::on_bt_gs1_clicked()
