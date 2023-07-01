@@ -3,6 +3,11 @@
 
 #include <QMainWindow>
 #include <QTime>
+#include <QFontDatabase>
+#include <QPushButton>
+#include <QException>
+#include <QGraphicsDropShadowEffect>
+#include <QProcess>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -16,9 +21,14 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+public slots:
+    void on_bt_gs1_clicked();
+
 private:
     Ui::MainWindow *ui;
+    QMap<QString, QPushButton*> m_list_gameService;
 
     void timerEvent(QTimerEvent *event);
+    void loadGameService();
 };
 #endif // MAINWINDOW_H

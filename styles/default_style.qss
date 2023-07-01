@@ -1,0 +1,22 @@
+QPushButton {
+    padding: 5px;
+    border: none;
+}
+
+QPushButton:hover {
+    border: 1px solid black;
+}
+
+QPushButton:hover:pressed
+{
+  border: 1px solid red;
+}
+
+QPushButton:focus
+{
+  border: 1px solid green;
+}
+
+QScrollArea { background: transparent; }
+QScrollArea > QWidget > QWidget { background: transparent; }
+QScrollArea > QWidget > QScrollBar { background: palette(base); }

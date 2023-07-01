@@ -1,3 +1,15 @@
 <RCC>
-    <qresource prefix="/images/logo.svg"/>
+    <qresource prefix="/">
+        <file>images/logo.svg</file>
+        <file>fonts/VarelaRound-Regular.ttf</file>
+        <file>images/EA_logo.svg</file>
+        <file>images/Epic_Games_logo.svg</file>
+        <file>images/Steam_logo.svg</file>
+        <file>images/Ubisoft_logo.svg</file>
+        <file>images/add_icon.svg</file>
+        <file>images/settings_icon.svg</file>
+        <file>styles/default_style.qss</file>
+        <file>images/background-blue.jpg</file>
+        <file>images/background-black.jpg</file>
+    </qresource>
 </RCC>

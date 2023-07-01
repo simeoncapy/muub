@@ -21,6 +21,7 @@ set(PROJECT_SOURCES
         mainwindow.ui
         ${TS_FILES}
         resource.qrc
+        buttonstyle.h buttonstyle.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
