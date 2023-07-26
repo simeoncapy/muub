@@ -80,7 +80,7 @@ void MainWindow::loadGameService()
     QSize gameServiceIconSize = QSize(48,48);
 
     QVector<QString> name_gameService;
-    // List should be loaded from file
+    // TODO List should be loaded from file
     name_gameService << "EA" << "Epic_Games" << "Steam" << "Ubisoft";
 
     int i = 0;
@@ -107,6 +107,7 @@ void MainWindow::loadGameService()
         effect->setOffset(3,3); //Adjust accordingly
         m_list_gameService[gs]->setGraphicsEffect(effect);
         //m_list_gameService[gs]->setStyle();
+        m_list_gameService[gs]->installEventFilter(this);
         i++;
     }
 }
@@ -147,4 +148,32 @@ void MainWindow::on_bt_gs1_clicked()
     QProcess *process = new QProcess(this);
     QString file = "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe";
     process->start(file);
+}
+
+void MainWindow::resizeEvent(QResizeEvent*)
+{
+    ui->banner->setMinimumHeight((int)(0.33 * this->height()));
+}
+
+bool MainWindow::eventFilter(QObject* obj, QEvent* event)
+{
+    if(event->type() == QEvent::KeyPress)
+    {
+        qDebug() << "Key!";
+        //QKeyEvent keyEvent = QKeyEvent(*event);
+    }
+    auto pushButton = qobject_cast<QPushButton*>(obj);
+    if (nullptr != pushButton)
+    {
+        if (event->type() == QEvent::FocusIn)
+        {
+            qDebug() << "Focus in";
+            QSize sz = QSize(ui->banner->height(), ui->banner->height());
+            QIcon icon = pushButton->icon();
+            QPixmap pixmap = icon.pixmap(sz).scaled(sz, Qt::KeepAspectRatio, Qt::SmoothTransformation);
+            ui->banner->setPixmap(pixmap);
+        }
+    }
+
+    return QWidget::eventFilter(obj, event);
 }

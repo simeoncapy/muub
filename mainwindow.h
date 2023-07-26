@@ -10,6 +10,7 @@
 #include <QProcess>
 #include <QSvgRenderer>
 #include <QPainter>
+#include <QMessageBox>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -30,9 +31,12 @@ private:
     Ui::MainWindow *ui;
     QMap<QString, QPushButton*> m_list_gameService;
 
+    // methods
     void timerEvent(QTimerEvent *event);
     void loadGameService();
     QPixmap recolorSvg(const QString& path, const QColor& color, const QSize& size);
     void setDesign();
+    void resizeEvent(QResizeEvent*);
+    bool eventFilter(QObject *, QEvent *);
 };
 #endif // MAINWINDOW_H
